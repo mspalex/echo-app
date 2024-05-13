@@ -1,10 +1,10 @@
 terraform {
   backend "azurerm" {
-        resource_group_name  = "tf-storage-rg"
-        storage_account_name = "echoapptfbackend"
+        resource_group_name  = "apais-tfstate-rg"
+        storage_account_name = "apaistfstatestg"
         container_name       = "tfstate"
         key                  = "terraform.tfstate"
-    }
+  }
 }
 
 provider "azurerm" {
