@@ -1,4 +1,4 @@
-appName = "tbernardo-echo-app"
+appName = "apais-echo-app"
 appServiceName = "api"
-dbName = "my-echodb"
+dbName = "apais-echodb"
 dbAdmin = "dbadmin"
