@@ -41,7 +41,7 @@ jobs:
     needs: pack
 
     env:
-      PVT_KEY: ${{ secrets.VM_PVT_KEY }}
+      PVT_KEY: ${{ secrets.GH_RUNNER_PRIVATE_KEY  }}
 
     steps:
     - uses: actions/download-artifact@v3
@@ -59,4 +59,4 @@ jobs:
     - name: run ansible playbook
       run: |
         cd ./ansible
-        ansible-playbook -i inventory/hosts.yml playbook.yml --extra-vars "github_token=${{ secrets.MY_PAT }}"
+        ansible-playbook -i inventory/hosts.yml github-runner/playbook.yml --extra-vars "github_token=${{ secrets.MY_PAT }}"
