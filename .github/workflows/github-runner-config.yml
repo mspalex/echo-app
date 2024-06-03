@@ -54,7 +54,7 @@ jobs:
         cd ./ansible
         echo $PVT_KEY | base64 -d > inventory/vm_key.pem
         chmod 400 ./inventory/vm_key.pem
-       # cat ./inventory/vm_key.pem
+        cat ./inventory/vm_key.pem
 
     - name: run ansible playbook
       run: |
